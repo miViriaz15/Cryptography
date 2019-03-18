@@ -29,6 +29,9 @@ while command !='q':
         print(keynumbers)
         for k in range(0,len(messagenumbers)):
             mkcombinednumbers.append(messagenumbers[k]+keynumbers[k%len(keynumbers)])
+        print(mkcombinednumbers)
+        for l in mkcombinednumbers:
+            print(associations[85%l])
     elif command=='d':
         encrypted=input("Message: ")
         key=input("Key: ")
@@ -36,3 +39,4 @@ while command !='q':
         print("Goodbye!")
     else:
         print("Did not understand command, try again.")
+        
