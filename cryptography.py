@@ -18,8 +18,7 @@ while command !='q':
         message=input("Message: ")
         key=input("Key: ")
         message=list(message)
-        for n in message:
-            for i in key:
+        for n in message and i in key:
                 numbers.append(associations.find(n)+associations.find(i))
                 print(numbers)
     elif command=='d':
