@@ -22,7 +22,7 @@ while command !='q':
         for n in message:
             messagenumbers.append(associations.find(n))
         for i in key:
-            keynumbers.append(assocations.find(i))
+            keynumbers.append(associations.find(i))
         print(messagenumbers)
         print(keynumbers)
     elif command=='d':
