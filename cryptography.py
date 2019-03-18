@@ -22,7 +22,7 @@ while command !='q':
     elif command=='d':
         encrypted=input("Message: ")
         key=input("Key: ")
+    elif command=='q':
+        print("Goodbye!")
     else:
         print("Did not understand command, try again.")
-if command=='q':
-        print("Goodbye!")
