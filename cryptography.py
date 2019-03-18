@@ -20,6 +20,7 @@ while command !='q':
         message=input("Message: ")
         key=input("Key: ")
         message=list(message)
+        key=list(key)
         for n in message:
             messagenumbers.append(associations.find(n))
         for i in key:
