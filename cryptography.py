@@ -10,6 +10,7 @@ Write and submit a program that encrypts and decrypts user data.
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
+associations=list(associations)
 messagenumbers=[]
 keynumbers=[]
 mkcombinednumbers=[] #message and key combined numbers
@@ -32,7 +33,7 @@ while command !='q':
             mkcombinednumbers.append(messagenumbers[k]+keynumbers[k%len(keynumbers)])
         #print(mkcombinednumbers)
         for l in mkcombinednumbers:
-            encrypted.append(associations[l])
+            encrypted.append(associations[87%(l-1)])
         #print(str(encrypted))
         print(''.join(encrypted))
     elif command=='d':
