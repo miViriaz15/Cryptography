@@ -11,11 +11,14 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 
-command=input("Enter e to encrypt, d to decrypt, or q to quit: ")
+command=['j']
 while command !='q':
+    command=input("Enter e to encrypt, d to decrypt, or q to quit: ")
     if command=='e':
         message=input("Message: ")
         key=input("Key: ")
+        message=list(message)
+        print(message)
     elif command=='d':
         encrypted=input("Message: ")
         key=input("Key: ")
