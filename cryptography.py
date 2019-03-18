@@ -33,7 +33,7 @@ while command !='q':
             mkcombinednumbers.append(messagenumbers[k]+keynumbers[k%len(keynumbers)])
         #print(mkcombinednumbers)
         for l in mkcombinednumbers:
-            encrypted.append(associations[l])
+            encrypted.append(associations[l]) #NEED TO FIX THIS l
         #print(str(encrypted))
         print(''.join(encrypted))
     elif command=='d':
