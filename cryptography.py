@@ -14,6 +14,7 @@ messagenumbers=[]
 keynumbers=[]
 mkcombinednumbers=[] #message and key combined numbers
 command=['j']
+encrypted=[]
 while command !='q':
     command=input("Enter e to encrypt, d to decrypt, or q to quit: ")
     if command=='e':
@@ -31,7 +32,8 @@ while command !='q':
             mkcombinednumbers.append(messagenumbers[k]+keynumbers[k%len(keynumbers)])
         print(mkcombinednumbers)
         for l in mkcombinednumbers:
-            print(associations[85%(l+1)])
+            encrypted.append(associations[l])
+            print(encrypted)
     elif command=='d':
         encrypted=input("Message: ")
         key=input("Key: ")
