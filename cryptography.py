@@ -18,7 +18,8 @@ while command !='q':
         message=input("Message: ")
         key=input("Key: ")
         message=list(message)
-        print(message)
+        for n in message:
+            print(associations.find(n))
     elif command=='d':
         encrypted=input("Message: ")
         key=input("Key: ")
