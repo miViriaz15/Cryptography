@@ -12,6 +12,7 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 messagenumbers=[]
 keynumbers=[]
+mkcombinednumbers=[] #message and key combined numbers
 command=['j']
 while command !='q':
     command=input("Enter e to encrypt, d to decrypt, or q to quit: ")
@@ -25,6 +26,7 @@ while command !='q':
             keynumbers.append(associations.find(i))
         print(messagenumbers)
         print(keynumbers)
+        
     elif command=='d':
         encrypted=input("Message: ")
         key=input("Key: ")
