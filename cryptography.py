@@ -26,7 +26,8 @@ while command !='q':
             keynumbers.append(associations.find(i))
         print(messagenumbers)
         print(keynumbers)
-        
+        for k in messagenumbers:
+            mkcombinednumbers[
     elif command=='d':
         encrypted=input("Message: ")
         key=input("Key: ")
