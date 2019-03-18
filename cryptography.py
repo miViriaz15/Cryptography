@@ -26,14 +26,15 @@ while command !='q':
             messagenumbers.append(associations.find(n))
         for i in key:
             keynumbers.append(associations.find(i))
-        print(messagenumbers)
-        print(keynumbers)
+        #print(messagenumbers)
+        #print(keynumbers)
         for k in range(0,len(messagenumbers)):
             mkcombinednumbers.append(messagenumbers[k]+keynumbers[k%len(keynumbers)])
-        print(mkcombinednumbers)
+        #print(mkcombinednumbers)
         for l in mkcombinednumbers:
             encrypted.append(associations[l])
-        print(str(encrypted))
+        #print(str(encrypted))
+        print(''.join(encrypted))
     elif command=='d':
         encrypted=input("Message: ")
         key=input("Key: ")
