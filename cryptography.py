@@ -10,7 +10,8 @@ Write and submit a program that encrypts and decrypts user data.
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
-numbers=[]
+messagenumbers=[]
+keynumbers=[]
 command=['j']
 while command !='q':
     command=input("Enter e to encrypt, d to decrypt, or q to quit: ")
@@ -19,8 +20,10 @@ while command !='q':
         key=input("Key: ")
         message=list(message)
         for n in message:
-                numbers.append(associations.find(n))
-                print(numbers)
+            messagenumbers.append(associations.find(n))
+        for i in key:
+            
+        print(numbers)
     elif command=='d':
         encrypted=input("Message: ")
         key=input("Key: ")
