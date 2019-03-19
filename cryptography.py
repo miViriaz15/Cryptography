@@ -53,6 +53,10 @@ while command !='q':
         for d in mksubtractnumbers:
             decrypts.append(associations[d])
         print(''.join(decrypts))
+        messagenumbers=[]                       #reset lists for next run
+        keynumbers=[]
+        mksubtractnumbers=[]
+        decrypts=[]
     elif command=='q':
         print("Goodbye!")
     else:
