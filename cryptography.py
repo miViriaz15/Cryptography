@@ -50,8 +50,9 @@ while command !='q':
             keynumbers.append(associations.find(b))
         for c in range(0,len(messagenumbers)):
             mksubtractnumbers.append(messagenumbers[c]-keynumbers[c%len(keynumbers)])
-        for d in mkcombinednumbers:
+        for d in mksubtractnumbers:
             decrypts.append(associations[d])
+        print(''.join(decrypts))
     elif command=='q':
         print("Goodbye!")
     else:
