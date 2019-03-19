@@ -14,7 +14,9 @@ messagenumbers=[]
 keynumbers=[]
 mkcombinednumbers=[] #message and key combined numbers
 command=['j']
-encrypted=[]
+encrypts=[]
+mksubtractnumbers=[]
+decrypts=[]
 while command !='q':
     command=input("Enter e to encrypt, d to decrypt, or q to quit: ")
     if command=='e':
@@ -32,16 +34,24 @@ while command !='q':
             mkcombinednumbers.append(messagenumbers[k]+keynumbers[k%len(keynumbers)])
         #print(mkcombinednumbers)
         for l in mkcombinednumbers:
-            encrypted.append(associations[l]) #NEED TO FIX THIS l
-        #print(str(encrypted))
-        print(''.join(encrypted))
+            encrypts.append(associations[l]) #NEED TO FIX THIS l
+        #print(str(encrypts))
+        print(''.join(encrypts))
         messagenumbers=[]                       #reset lists for next run
         keynumbers=[]
         mkcombinednumbers=[]
-        encrypted=[]
+        encrypts=[]
     elif command=='d':
         encrypted=input("Message: ")
         key=input("Key: ")
+        for a in encrypted:
+            messagenumbers.append(associations.find(a))
+        for b in key:
+            keynumbers.append(associations.find(b))
+        for c in range(0,len(messagenumbers)):
+            mksubtractnumbers.append(messagenumbers[c]-keynumbers[c%len(keynumbers)])
+        for d in mkcombinednumbers:
+            decrypts.append(associations[d])
     elif command=='q':
         print("Goodbye!")
     else:
