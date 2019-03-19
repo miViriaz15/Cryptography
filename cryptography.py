@@ -34,7 +34,7 @@ while command !='q':
             mkcombinednumbers.append(messagenumbers[k]+keynumbers[k%len(keynumbers)])
         #print(mkcombinednumbers)
         for l in mkcombinednumbers:
-            encrypts.append(associations[l]) #NEED TO FIX THIS l
+            encrypts.append(associations[l%87]) #NEED TO FIX THIS l
         #print(str(encrypts))
         print(''.join(encrypts))
         messagenumbers=[]                       #reset lists for next run
@@ -51,7 +51,7 @@ while command !='q':
         for c in range(0,len(messagenumbers)):
             mksubtractnumbers.append(messagenumbers[c]-keynumbers[c%len(keynumbers)])
         for d in mksubtractnumbers:
-            decrypts.append(associations[d])
+            decrypts.append(associations[d%87])
         print(''.join(decrypts))
         messagenumbers=[]                       #reset lists for next run
         keynumbers=[]
